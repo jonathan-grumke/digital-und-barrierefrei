@@ -1,9 +1,10 @@
 ---
-const pageTitle = "Home | digital & barrierefrei";
+const pageTitle = "Über";
 const pageName = "digital & barrierefrei";
 
 import '../styles/global.css';
 ---
+
 
 <html lang="de">
 	<head>
@@ -11,9 +12,13 @@ import '../styles/global.css';
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>{pageTitle} | {pageName}</title>
+        <title>{pageTitle} | {pageName}</title>
 	</head>
 	<body>
-		<h1>{pageName}</h1>
+        <a href="/">Home</a>
+        <a href="/about/">About</a>
+
+		<h1>{pageTitle}</h1>
+        <p>Ich bin Jonathan und Enthusiast für Digitales und Inklusion.</p>
 	</body>
 </html>
