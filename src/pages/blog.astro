@@ -1,10 +1,14 @@
 ---
-const pageTitle = "Blog";
-
 import BaseLayout from "../layouts/BaseLayout.astro";
+
+const pageTitle = "Blog";
+const allPosts = await Astro.glob('../pages/posts/*.md');
 ---
 
 <BaseLayout pageTitle={pageTitle}>
 	<h1>Mein Blog über digitale Barrierefreiheit</h1>
     <p>In diesem Blog geht es um Themen rund um digitale Barrierefreiheit.</p>
+    <ul>
+        {allPosts.map((post) => <li><a href={post.url}>{post.frontmatter.title}</a></li>)}
+    </ul>
 </BaseLayout>
