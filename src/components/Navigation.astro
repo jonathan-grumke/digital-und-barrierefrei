@@ -2,8 +2,48 @@
 
 ---
 
-<div class="nav-links">
-    <a href="/">Home</a>
-    <a href="/about/">Über</a>
-    <a href="/blog/">Blog</a>
+<div>
+    <nav role="navigation" id="main-navigation" aria-label="Hauptnavigation">
+        <div class="header-row">
+            <div class="nav-top-row">
+                <div class="logo">
+                    <a href="/">digital & barrierefrei</a>
+                </div>
+                <button aria-expanded="false" id="burger-menu-button">
+                    Menü
+                    <img src="/menu-icon.svg" class="icon" />
+                </button>
+            </div>
+            <div>
+                <ul class="nav-list" id="navigation-list">
+                    <li>
+                        <a href="/">Startseite</a>
+                    </li>
+                    <li>
+                        <a href="/blog/">Blog</a>
+                    </li>
+                    <li>
+                        <a href="/about/">Über</a>
+                    </li>
+                    <li>
+                        <a href="/blog/">Kontakt</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 </div>
+
+<script>
+    var navList = document.getElementById("navigation-list");
+    var brugerButton = document.getElementById("burger-menu-button");
+    brugerButton.addEventListener("click", () => {
+        if (navList.style.display == "block") {
+            navList.style.display = "none";
+            brugerButton.ariaExpanded = "false";
+        } else {
+            navList.style.display = "block";
+            brugerButton.ariaExpanded = "true";
+        }
+    });
+</script>

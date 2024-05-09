@@ -6,11 +6,48 @@ import Social from "./Social.astro";
     footer {
         display: flex;
         gap: 1rem;
-        margin-top: 2rem;
+        margin-top: auto;
+        width: 100%;
+        padding: 10px;
+
+        background-color: rgb(0, 0, 0);
     }
+
+    .footer-list{
+        list-style: none;
+    }
+
+    .footer-list a{
+        color: white;
+
+    }
+
+    .footer-list a:hover,
+    .footer-list a:focus {
+        background-color: white;
+        color: rgb(87, 87, 87);
+        text-decoration: underline;
+        outline-color: rgb(48, 48, 48);
+        outline-offset: 6px;
+    }
+
 </style>
 
 <footer>
+    <ul class="footer-list" id="footer-list">
+        <li>
+            <a href="/">Impressum</a>
+        </li>
+        <li>
+            <a href="/">Datenschutz</a>
+        </li>
+        <li>
+            <a href="/">Barrierefreiheit</a>
+        </li>
+        <li>
+            <a href="/">Kontakt</a>
+        </li>
+    </ul>
     <Social platform="github" username="jonathan-grumke" />
     <Social platform="linkedin" username="in/jonathan-grumke-25a06a194" />
 </footer>

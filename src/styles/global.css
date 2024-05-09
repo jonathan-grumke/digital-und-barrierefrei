@@ -1,13 +1,12 @@
 html {
-    background-color: #f1f5f9;
-    font-family: sans-serif;
+    background-color: #ededed;
+    font-family: "Noto Sans", Helvetica, Arial, sans-serif;
 }
 
 body {
-    margin: 0 auto;
+    margin: auto;
     width: 100%;
-    max-width: 80ch;
-    padding: 1rem;
+    /* padding: 1rem; */
     line-height: 1.5;
 }
 
@@ -17,68 +16,173 @@ body {
 
 h1 {
     margin: 1rem 0;
-    font-size: 2.5rem;
+    font-size: 1.5rem;
 }
 
 /* nav styles */
 
-.hamburger {
-    padding-right: 20px;
-    cursor: pointer;
-}
 
-.hamburger .line {
-    display: block;
-    width: 40px;
-    height: 5px;
-    margin-bottom: 10px;
-    background-color: #ff9776;
-}
+@media screen and (max-width: 635px) {
+    body {
+        position: fixed;
+    }
 
-.nav-links {
-    width: 100%;
-    top: 5rem;
-    left: 48px;
-    background-color: #ff9776;
-    display: none;
-    margin: 0;
-}
+    .nav-top-row {
+        display: flex;
+        justify-content: space-between;
+    }
 
-.nav-links a {
-    display: block;
-    text-align: center;
-    padding: 10px 0;
-    text-decoration: none;
-    font-size: 1.2rem;
-    font-weight: bold;
-    text-transform: uppercase;
-}
+    .logo {
+        height: 55px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 
-.nav-links a:hover,
-.nav-links a:focus {
-    background-color: #ff9776;
-}
+    .logo a {
+        text-decoration: none;
+        font-size: 1.5rem;
+        color: black;
+        font-weight: bold;
+    }
 
-.expanded {
-    display: unset;
+    .icon {
+        position: relative;
+        width: 1em;
+        height: 1em;
+        margin-left: 8px;
+    }
+
+    #burger-menu-button {
+        display: inline-block;
+        padding: 7px 0px;
+        border: none;
+        margin-left: auto;
+    }
+
+    #burger-menu-button .line {
+        display: block;
+        width: 40px;
+        height: 5px;
+        margin: 10px;
+        background-color: black;
+    }
+
+    .nav-list {
+        width: 100%;
+        margin: 0;
+        padding: 0px;
+        list-style: none;
+        display: none;
+    }
+
+    .nav-list li {
+        display: block;
+        text-align: center;
+    }
+
+    .nav-list a {
+        display: block;
+        text-decoration: none;
+        font-size: 1.5rem;
+        /* font-weight: bold; */
+        padding: 10px 20px;
+        color: white;
+        border: 1px solid;
+        border-color: rgb(87, 87, 87);
+        background: rgb(87, 87, 87);
+    }
 }
 
 @media screen and (min-width: 636px) {
-    .nav-links {
-        margin-left: 5em;
-        display: block;
-        position: static;
-        width: auto;
-        background: none;
+
+    header {
+        margin-top: 10px;
+        border-bottom: solid 1px black;
     }
 
-    .nav-links a {
-        display: inline-block;
-        padding: 15px 20px;
+    .header-row {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    /* .nav-top-row {
+        display: block;
+    } */
+
+    .logo {
+        /* padding: 15px; */
+        margin-right: 20px;
+        text-align: center;
+        width: 300px;
+        /* margin-bottom: 20px; */
+    }
+
+    .logo a {
+        text-decoration: none;
+        font-size: 1.5rem;
+        color: black;
+        font-weight: bold;
+    }
+
+    #main-navigation {
+        /* display: table; */
+        margin-left: auto;
+        margin-right: auto;
+        width: 90%;
+        max-width: 1200px;
+    }
+
+    .nav-list {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: space-evenly;
+        /* outline: 1px solid rgb(87, 87, 87); */
+        /* background: rgb(87, 87, 87); */
+        width: 900px;
+    }
+
+    .nav-list li {
+        /* display: table-cell; */
+        /* text-align: center;
+        width: 25%; */
+        /* position: relative; */
+    }
+
+    .nav-list a {
+        display: inline-flex;
+        /* padding: 0.5em; */
+        color: rgb(63, 63, 63);
+        text-decoration: none;
+        font-size: 1.5rem;
+        /* border: 1px solid; */
+        /* border-radius: 6px; */
+        border-color: rgb(87, 87, 87);
+        border-bottom: solid 4px transparent;
+    }
+
+    .nav-list a:hover,
+    .nav-list a:focus {
+        /* background-color: white; */
+        /* color: rgb(87, 87, 87); */
+        /* text-decoration: underline; */
+        outline-color: rgb(48, 48, 48);
+        outline-offset: 6px;
+        border-bottom: solid 4px black;
+    }
+
+    #burger-menu-button {
+        display: none;
     }
 
     .hamburger {
         display: none;
     }
 
+}
+
+.expanded {
+    display: unset;
 }
