@@ -13,13 +13,12 @@ import Social from "./Social.astro";
         background-color: rgb(0, 0, 0);
     }
 
-    .footer-list{
+    .footer-list {
         list-style: none;
     }
 
-    .footer-list a{
+    .footer-list a {
         color: white;
-
     }
 
     .footer-list a:hover,
@@ -30,24 +29,25 @@ import Social from "./Social.astro";
         outline-color: rgb(48, 48, 48);
         outline-offset: 6px;
     }
-
 </style>
 
 <footer>
-    <ul class="footer-list" id="footer-list">
-        <li>
-            <a href="/">Impressum</a>
-        </li>
-        <li>
-            <a href="/">Datenschutz</a>
-        </li>
-        <li>
-            <a href="/">Barrierefreiheit</a>
-        </li>
-        <li>
-            <a href="/">Kontakt</a>
-        </li>
-    </ul>
-    <Social platform="github" username="jonathan-grumke" />
-    <Social platform="linkedin" username="in/jonathan-grumke-25a06a194" />
+    <div class="content">
+        <ul class="footer-list" id="footer-list">
+            <li>
+                <a href="/">Impressum</a>
+            </li>
+            <li>
+                <a href="/">Datenschutz</a>
+            </li>
+            <li>
+                <a href="/">Barrierefreiheit</a>
+            </li>
+            <li>
+                <a href="/">Kontakt</a>
+            </li>
+        </ul>
+        <Social platform="github" username="jonathan-grumke" />
+        <Social platform="linkedin" username="in/jonathan-grumke-25a06a194" />
+    </div>
 </footer>

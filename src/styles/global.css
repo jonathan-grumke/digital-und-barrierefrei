@@ -6,7 +6,6 @@ html {
 body {
     margin: auto;
     width: 100%;
-    /* padding: 1rem; */
     line-height: 1.5;
 }
 
@@ -19,6 +18,12 @@ h1 {
     font-size: 1.5rem;
 }
 
+.content {
+    max-width: 1200px;
+    padding: 10px;
+    margin: auto;
+}
+
 /* nav styles */
 
 
@@ -29,11 +34,11 @@ h1 {
 
     .nav-top-row {
         display: flex;
-        justify-content: space-between;
+        /* justify-content: space-between; */
     }
 
     .logo {
-        height: 55px;
+        height: 56px;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -48,25 +53,27 @@ h1 {
 
     .icon {
         position: relative;
-        width: 1em;
-        height: 1em;
+        width: 30px;
+        height: 30px;
         margin-left: 8px;
     }
 
     #burger-menu-button {
-        display: inline-block;
+        background-color: #ededed;
+        display: inline-flex;
         padding: 7px 0px;
         border: none;
         margin-left: auto;
+        align-items: center;
     }
 
-    #burger-menu-button .line {
+    /* #burger-menu-button .line {
         display: block;
         width: 40px;
         height: 5px;
         margin: 10px;
         background-color: black;
-    }
+    } */
 
     .nav-list {
         width: 100%;
@@ -85,7 +92,6 @@ h1 {
         display: block;
         text-decoration: none;
         font-size: 1.5rem;
-        /* font-weight: bold; */
         padding: 10px 20px;
         color: white;
         border: 1px solid;
@@ -106,16 +112,10 @@ h1 {
         justify-content: space-between;
     }
 
-    /* .nav-top-row {
-        display: block;
-    } */
-
     .logo {
-        /* padding: 15px; */
         margin-right: 20px;
-        text-align: center;
+        padding: 0 10px 0 10px;
         width: 300px;
-        /* margin-bottom: 20px; */
     }
 
     .logo a {
@@ -126,7 +126,6 @@ h1 {
     }
 
     #main-navigation {
-        /* display: table; */
         margin-left: auto;
         margin-right: auto;
         width: 90%;
@@ -139,35 +138,20 @@ h1 {
         padding: 0;
         display: flex;
         justify-content: space-evenly;
-        /* outline: 1px solid rgb(87, 87, 87); */
-        /* background: rgb(87, 87, 87); */
         width: 900px;
-    }
-
-    .nav-list li {
-        /* display: table-cell; */
-        /* text-align: center;
-        width: 25%; */
-        /* position: relative; */
     }
 
     .nav-list a {
         display: inline-flex;
-        /* padding: 0.5em; */
         color: rgb(63, 63, 63);
         text-decoration: none;
         font-size: 1.5rem;
-        /* border: 1px solid; */
-        /* border-radius: 6px; */
         border-color: rgb(87, 87, 87);
         border-bottom: solid 4px transparent;
     }
 
     .nav-list a:hover,
     .nav-list a:focus {
-        /* background-color: white; */
-        /* color: rgb(87, 87, 87); */
-        /* text-decoration: underline; */
         outline-color: rgb(48, 48, 48);
         outline-offset: 6px;
         border-bottom: solid 4px black;
